@@ -1,0 +1,109 @@
+
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <title>Colón Seguros - Plataforma Camaras</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
+       <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <style type="text/css">
+    
+ul.gallery{    
+margin-left: 3vw;     
+margin-right:3vw;  
+}    
+
+.zoom {      
+-webkit-transition: all 0.35s ease-in-out;    
+-moz-transition: all 0.35s ease-in-out;    
+transition: all 0.35s ease-in-out;     
+cursor: -webkit-zoom-in;      
+cursor: -moz-zoom-in;      
+cursor: zoom-in;  
+}     
+
+.zoom:hover,  
+.zoom:active,   
+.zoom:focus {
+/**adjust scale to desired size, 
+add browser prefixes**/
+-ms-transform: scale(1.5);    
+-moz-transform: scale(1.5);  
+-webkit-transform: scale(1.5);  
+-o-transform: scale(1.5);  
+transform: scale(1.5);    
+position:relative;      
+z-index:100;  
+}
+
+/**To keep upscaled images visible on mobile, 
+increase left & right margins a bit**/  
+@media only screen and (max-width: 768px) {   
+ul.gallery {      
+margin-left: 15vw;       
+margin-right: 15vw;
+}
+
+/**TIP: Easy escape for touch screens,
+give gallery's parent container a cursor: pointer.**/
+.DivName {cursor: pointer}
+}
+    </style>
+</head>
+
+   <%- include header %>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+    <script>
+      function refreshIt() {
+        if (!document.images) return;
+        document.images['myCam'].src = 'http://190.210.147.3:5127/tmpfs/auto.jpg?' + Math.random();
+        setTimeout('refreshIt()',200);
+    }
+    function refreshIt1() {
+        if (!document.images) return;
+        document.images['myCam1'].src = 'http://190.210.147.3:5128/tmpfs/auto.jpg?' + Math.random();
+        setTimeout('refreshIt1()',200);
+    }
+    function refreshIt2() {
+        if (!document.images) return;
+        document.images['myCam2'].src = 'http://190.210.147.3:5124/tmpfs/auto.jpg?' + Math.random();
+        setTimeout('refreshIt2()',200);
+    }
+        function conectar()
+        {
+            url= 'http://camaras:AMJC0l0n26566@190.210.147.3:5127/tmpfs/auto.jpg',
+                $.getScript(url);
+        }
+        function conectar1()
+        {
+            url= 'http://camaras:AMJC0l0n26566@190.210.147.3:5128/tmpfs/auto.jpg',
+                $.getScript(url);
+        }
+        function conectar2()
+        {
+            url= 'http://camaras:AMJC0l0n26566@190.210.147.3:5124/tmpfs/auto.jpg',
+                $.getScript(url);
+        }
+
+    </script>
+    <body>
+      <div class="row">
+            <div class="container col-sm-12" id="mainform">
+                    <div id="signupbox" style=" margin-top:50px">
+                                                                   
+        <ul class="list-inline gallery">    
+          <div class="col-6 col-sm-3"><img class="thumbnail zoom" src="http://190.210.147.3:5123/stream/video/mjpeg?resolution=HD&&Username=admin&&Password=QU1KQzBsMG4yNjU2Ng==&&tempid=0.5978971717265431" width="100%" height="30%"></div>
+          <div class="col-6 col-sm-3"><img class="thumbnail zoom" src="http://190.210.147.3:5125/stream/video/mjpeg?resolution=HD&&Username=admin&&Password=QU1KQzBsMG4yNjU2Ng==&&tempid=0.7273849723473436" width="100%" height="30%"></div>
+          <div class="col-6 col-sm-3"><img class="thumbnail zoom" src="http://190.210.147.3:5126/stream/video/mjpeg?resolution=HD&&Username=admin&&Password=QU1KQzBsMG4yNjU2Ng==&&tempid=0.7273849723473436" width="100%" height="30%"></div>
+          <div class="col-6 col-sm-3"><img class="thumbnail zoom" src="http://190.210.147.3:5129/stream/video/mjpeg?resolution=HD&&Username=admin&&Password=QU1KQzBsMG4yNjU2Ng==&&tempid=0.5978971717265431" width="100%" height="30%"></div>
+          <div class="w-100"></div>
+          <div class="col-6 col-sm-3"><img class="thumbnail zoom" src="http://190.210.147.3:5122/videostream.cgi?user=camaras&pwd=AMJC0l0n2656&resolution=480&rate=0"   width="100%" height="30%"></div>
+          <div class="col-6 col-sm-3"><img class="thumbnail zoom" onloadstart="conectar();" onclick="setTimeout('refreshIt()',200);" src="http://190.210.147.3:5127/tmpfs/auto.jpg?"  width="100%" height="30%" name="myCam"></div>
+          <div class="col-6 col-sm-3"><img class="thumbnail zoom" onloadstart="conectar1();" onclick="setTimeout('refreshIt1()',200);" src="http://190.210.147.3:5128/tmpfs/auto.jpg?"  width="100%" height="30%" name="myCam1"></div>
+          <div class="col-6 col-sm-3"><img class="thumbnail zoom" onloadstart="conectar2();" onclick="setTimeout('refreshIt2()',200);" src="http://190.210.147.3:5124/tmpfs/auto.jpg?"  width="100%" height="30%" name="myCam2"></div>
+        </ul>
+        </div>
+      </div>
+</body>
+</html>

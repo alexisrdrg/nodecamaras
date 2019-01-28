@@ -1,0 +1,44 @@
+<html lang="en">
+<head><title>Colon Seguros - Plataforma Camaras</title></head>
+<%- include header %>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<div class="row">
+    <body>
+    <div class="container col-sm-12" id="mainform">
+            <div id="signupbox" style=" margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                                                           
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h3 class="panel-title"> Cuenta de Usuario</h3>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="https://www.colonseguros.com.ar/wp-content/uploads/2017/09/logo-colon.jpg" width="100%" height="10%"></div>
+            <div class=" col-md-9 col-lg-9 "> 
+              <table class="table table-user-information">
+                <tbody>
+                  <tr>
+                    <td>Usuario</td>
+                    <td><%=data[0].user_name%></td>
+                  </tr>
+                  <tr>
+                    <td>Nombre</td>
+                    <td><%=data[0].nombre%> <%=data[0].apellido%></td>
+                  </tr>
+                  <tr>
+                    <td>Email</td>
+                    <td><%=data[0].email%></td>
+                  </tr>
+                  <tr>
+                    <td>Celular</td>
+                    <td><%=data[0].movil%></td>
+                    <td><%=data[0].movil%></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+    </div>
+  </body>
+  </html>
