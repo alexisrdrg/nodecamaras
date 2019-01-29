@@ -4,5 +4,5 @@ COPY package.json /app
 RUN npm install
 COPY . /app
 CMD node app.js
-EXPOSE 80
+EXPOSE 8080
 RUN chmod +x /startscript.sh
