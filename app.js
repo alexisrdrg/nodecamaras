@@ -16,7 +16,7 @@ var connection = mysql.createConnection({
 });
  
 global.db = connection;
-app.set('port', process.env.PORT || 80);
+app.set('port', process.env.PORT || 8080);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -40,4 +40,4 @@ app.get('/home/logout', user.logout);
 app.get('/home/profile',user.profile);
 
 
-app.listen(8070)
+app.listen(8080)
