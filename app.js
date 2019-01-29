@@ -16,7 +16,7 @@ var connection = mysql.createConnection({
 });
  
 global.db = connection;
-app.set('port', process.env.PORT || 8070);
+app.set('port', process.env.PORT || 80);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: false }));
