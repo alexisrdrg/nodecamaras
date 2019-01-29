@@ -1,4 +1,4 @@
-FROM node:7
+FROM camaras
 WORKDIR /app
 COPY package.json /app
 RUN npm install
