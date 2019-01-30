@@ -9,10 +9,10 @@ var app = express();
 var mysql      = require('mysql');
 var bodyParser=require("body-parser");
 var connection = mysql.createConnection({
-  host: '31.170.161.87',
-  user: 'u876682099_users',
-  password: 'Colon2018!!',
-  database: 'u876682099_users'
+  host: 'localhost',
+  user: 'root',
+  password: 'password',
+  database: 'users'
 });
  
 global.db = connection;
