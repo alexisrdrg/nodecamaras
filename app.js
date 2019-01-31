@@ -9,8 +9,8 @@ var app = express();
 var mysql      = require('mysql');
 var bodyParser=require("body-parser");
 var connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
+  host: 'dbusers.cvoe81vmt85f.sa-east-1.rds.amazonaws.com',
+  user: 'users',
   password: 'Colon2018!!',
   database: 'users'
 });
